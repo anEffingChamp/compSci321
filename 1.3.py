@@ -1,3 +1,5 @@
+# Exercises 1.3
+# (Display a pattern) Write a program that displays the following pattern:
 uString = ' U  ' * 2;
 print('F' * 7, uString, 'NN    NN');
 print('F' * 2, ' ' * 4, uString, 'NNN   NN');
