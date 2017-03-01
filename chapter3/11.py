@@ -1,10 +1,11 @@
 # reverse number
 import sys
-input = input('Please enter a four digit number: ');
-if (len(input) != 4):
+input = eval(input('Please enter a four digit number: '));
+if (input < 1000):
     print('The string is not four characters long.');
     sys.exit();
-# TODO There is no reason to require an integer for this exercise. The program
-# can reverse any four character string.
-# https://docs.python.org/2/whatsnew/2.3.html#extended-slices
-print('The reversed number is ' + input[::-1]);
+digit4 = input // 1000;
+digit3 = (input - (digit4 * 1000)) // 100;
+digit2 = (input - (digit4 * 1000) - (digit3 * 100)) // 10;
+digit1 = input - (digit4 * 1000) - (digit3 * 100) - (digit2 * 10);
+print('The reversed number is ' + str(digit1) + str(digit2) + str(digit3) + str(digit4));
